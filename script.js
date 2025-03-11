@@ -1,56 +1,4 @@
-// Animación al scroll
-function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-up');
-            observer.unobserve(entry.target);
-        }
-    });
-}
-
-// Configurar el Observer
-const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1,
-    rootMargin: '50px'
-});
-
-// Observar elementos
-document.querySelectorAll('.service-card, h2, .project-card').forEach(el => {
-    observer.observe(el);
-    el.style.opacity = '0';
-});
-
-// Header scroll effect
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        header.classList.add('header-scroll');
-    } else {
-        header.classList.remove('header-scroll');
-    }
-});
-
-// Menú móvil
-const menuButton = document.getElementById('menuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    const isOpen = mobileMenu.classList.contains('active');
-    menuButton.innerHTML = isOpen ? 
-        '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>' :
-        '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>';
-});
-
-// Cerrar menú al hacer click en un enlace
-document.querySelectorAll('.menu-mobile a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        menuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>';
-    });
-});
-
-// Scroll suave para los enlaces de navegación
+// Navegación suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -88,28 +36,12 @@ const translations = {
         'service-logo-title': 'Creazione di Loghi',
         'service-logo-desc': 'Creiamo loghi personalizzati che catturano l\'essenza del tuo marchio, garantendo un\'identità visiva coerente e unica',
         
-        // Proceso
-        'process-title': 'Il nostro processo',
-        'process-discovery': 'Scoperta',
-        'process-discovery-desc': 'Comprendiamo i tuoi obiettivi e le tue esigenze',
-        'process-strategy': 'Strategia',
-        'process-strategy-desc': 'Pianifichiamo la migliore soluzione',
-        'process-design': 'Design',
-        'process-design-desc': 'Creiamo l\'esperienza visiva',
-        'process-development': 'Sviluppo',
-        'process-development-desc': 'Implementiamo la soluzione',
-        
         // Proyectos
         'projects-title': 'Progetti in evidenza',
-        'project-1': 'Progetto 1',
-        'project-2': 'Progetto 2',
-        'project-3': 'Progetto 3',
-        'project-4': 'Progetto 4',
-        'view-details': 'Vedi dettagli',
+        'view-details': 'Visita il sito',
         
         // Contacto
-        'contact-title': 'Pronto per iniziare?',
-        'contact-desc': 'Raccontaci del tuo progetto e ti contatteremo entro 24 ore',
+        'contact-title': 'Raccontaci del tuo progetto e ti contatteremo entro 24 ore',
         'contact-name': 'Nome',
         'contact-email': 'Email',
         'contact-message': 'Messaggio',
@@ -120,10 +52,6 @@ const translations = {
         
         // Footer
         'footer-services': 'Servizi',
-        'footer-web': 'Design Web Personalizzato',
-        'footer-landing': 'Landing Pages',
-        'footer-seo': 'SEO e Marketing Digitale',
-        'footer-branding': 'Branding',
         'footer-contact': 'Contatto',
         'footer-social': 'Social',
         'footer-rights': 'Tutti i diritti riservati.'
@@ -154,28 +82,12 @@ const translations = {
         'service-logo-title': 'Creación de Logos',
         'service-logo-desc': 'Creamos logos personalizados que capturan la esencia de tu marca, asegurando una identidad visual coherente y única',
         
-        // Proceso
-        'process-title': 'Nuestro Proceso',
-        'process-discovery': 'Descubrimiento',
-        'process-discovery-desc': 'Entendemos tus objetivos y necesidades',
-        'process-strategy': 'Estrategia',
-        'process-strategy-desc': 'Planificamos la mejor solución',
-        'process-design': 'Diseño',
-        'process-design-desc': 'Creamos la experiencia visual',
-        'process-development': 'Desarrollo',
-        'process-development-desc': 'Implementamos la solución',
-        
         // Proyectos
         'projects-title': 'Proyectos Destacados',
-        'project-1': 'Proyecto 1',
-        'project-2': 'Proyecto 2',
-        'project-3': 'Proyecto 3',
-        'project-4': 'Proyecto 4',
-        'view-details': 'Ver detalles',
+        'view-details': 'Visitar sitio',
         
         // Contacto
-        'contact-title': '¿Listo para empezar?',
-        'contact-desc': 'Cuéntanos sobre tu proyecto y te contactaremos en 24 horas',
+        'contact-title': 'Cuéntanos sobre tu proyecto y te contactaremos en 24 horas',
         'contact-name': 'Nombre',
         'contact-email': 'Email',
         'contact-message': 'Mensaje',
@@ -186,10 +98,6 @@ const translations = {
         
         // Footer
         'footer-services': 'Servicios',
-        'footer-web': 'Diseño Web Personalizado',
-        'footer-landing': 'Landing Pages',
-        'footer-seo': 'SEO y Marketing Digital',
-        'footer-branding': 'Branding',
         'footer-contact': 'Contacto',
         'footer-social': 'Social',
         'footer-rights': 'Todos los derechos reservados.'
@@ -220,28 +128,12 @@ const translations = {
         'service-logo-title': 'Logo Creation',
         'service-logo-desc': 'We create custom logos that capture the essence of your brand, ensuring a coherent and unique visual identity',
         
-        // Process
-        'process-title': 'Our Process',
-        'process-discovery': 'Discovery',
-        'process-discovery-desc': 'We understand your goals and needs',
-        'process-strategy': 'Strategy',
-        'process-strategy-desc': 'We plan the best solution',
-        'process-design': 'Design',
-        'process-design-desc': 'We create the visual experience',
-        'process-development': 'Development',
-        'process-development-desc': 'We implement the solution',
-        
         // Projects
         'projects-title': 'Featured Projects',
-        'project-1': 'Project 1',
-        'project-2': 'Project 2',
-        'project-3': 'Project 3',
-        'project-4': 'Project 4',
-        'view-details': 'View details',
+        'view-details': 'Visit site',
         
         // Contact
-        'contact-title': 'Ready to start?',
-        'contact-desc': 'Tell us about your project and we\'ll contact you within 24 hours',
+        'contact-title': 'Tell us about your project and we\'ll contact you within 24 hours',
         'contact-name': 'Name',
         'contact-email': 'Email',
         'contact-message': 'Message',
@@ -252,10 +144,6 @@ const translations = {
         
         // Footer
         'footer-services': 'Services',
-        'footer-web': 'Custom Web Design',
-        'footer-landing': 'Landing Pages',
-        'footer-seo': 'SEO and Digital Marketing',
-        'footer-branding': 'Branding',
         'footer-contact': 'Contact',
         'footer-social': 'Social',
         'footer-rights': 'All rights reserved.'
@@ -264,27 +152,20 @@ const translations = {
 
 // Función para cambiar el idioma
 function changeLanguage(language) {
-    // Guardar preferencia de idioma
     localStorage.setItem('language', language);
-    
-    // Cambiar el atributo lang del html
     document.documentElement.lang = language;
     
-    // Actualizar todos los elementos con data-lang-key
     document.querySelectorAll('[data-lang-key]').forEach(element => {
         const key = element.getAttribute('data-lang-key');
         
-        // Si el elemento tiene un atributo específico a traducir
         if (element.hasAttribute('data-lang-attr')) {
             const attr = element.getAttribute('data-lang-attr');
             element.setAttribute(attr, translations[language][key] || key);
         } else {
-            // Traducir el contenido del elemento
             element.textContent = translations[language][key] || key;
         }
     });
     
-    // Actualizar clase activa en botones de idioma
     document.querySelectorAll('.lang-btn').forEach(btn => {
         if (btn.getAttribute('data-lang') === language) {
             btn.classList.add('active');
@@ -304,10 +185,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 // Inicializar idioma
 document.addEventListener('DOMContentLoaded', function() {
-    // Comprobar si hay un idioma guardado
     const savedLanguage = localStorage.getItem('language');
-    
-    // Usar el idioma guardado o italiano por defecto
     const initialLanguage = savedLanguage || 'it';
     changeLanguage(initialLanguage);
 });
