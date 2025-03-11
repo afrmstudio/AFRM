@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFRM Studio - Design Web e Branding Digitale</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-white">
+    <header class="fixed w-full bg-white/90 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="img/logo.png" alt="AFRM Studio" class="h-8 logo-hover">
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="menu-desktop hidden md:flex space-x-8">
+                        <a href="#servizi" class="text-gray-600 hover:text-black transition-colors" data-lang-key="nav-services">Servizi</a>
+                        <a href="#progetti" class="text-gray-600 hover:text-black transition-colors" data-lang-key="nav-projects">Progetti</a>
+                        <a href="#processo" class="text-gray-600 hover:text-black transition-colors" data-lang-key="nav-process">Processo</a>
+                        <a href="#contatto" class="text-gray-600 hover:text-black transition-colors" data-lang-key="nav-contact">Contatto</a>
+                    </div>
+                    
+                    <div class="language-switcher flex space-x-2 ml-4">
+                        <button class="lang-btn text-sm font-medium active" data-lang="it">IT</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="lang-btn text-sm font-medium" data-lang="es">ES</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="lang-btn text-sm font-medium" data-lang="en">EN</button>
+                    </div>
+
+                    <button class="md:hidden ml-4" id="menuButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-mobile md:hidden bg-white absolute left-0 w-full px-6 py-4" id="mobileMenu">
+                <a href="#servizi" class="block py-2 text-gray-600 hover:text-black transition-colors" data-lang-key="nav-services">Servizi</a>
+                <a href="#progetti" class="block py-2 text-gray-600 hover:text-black transition-colors" data-lang-key="nav-projects">Progetti</a>
+                <a href="#processo" class="block py-2 text-gray-600 hover:text-black transition-colors" data-lang-key="nav-process">Processo</a>
+                <a href="#contatto" class="block py-2 text-gray-600 hover:text-black transition-colors" data-lang-key="nav-contact">Contatto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-3xl animate-fade-up">
+                <h1 class="text-6xl font-bold mb-6" data-lang-key="hero-title">
+                    Creiamo esperienze online memorabili
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 delay-1" data-lang-key="hero-intro">
+                    Ciao! Sono Alex Reyna, parte del team di AFRM Studio. Ci appassiona aiutare imprenditori e aziende a creare una presenza online autentica ed efficace.
+                </p>
+                <p class="text-xl text-gray-600 mb-8 delay-2" data-lang-key="hero-desc">
+                    In AFRM Studio, offriamo soluzioni digitali progettate per aiutarti a distinguerti nel mondo digitale, dal web design personalizzato alle strategie di branding che si connettono davvero con il tuo pubblico.
+                </p>
+                <a href="#contatto" class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors btn-hover delay-3" data-lang-key="hero-cta">
+                    Inizia il tuo progetto
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servizi" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center" data-lang-key="services-title">I nostri servizi</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="service-web-title">Design Web Personalizzato</h3>
+                    <p class="text-gray-600" data-lang-key="service-web-desc">Creiamo siti web adattati al tuo stile e alle tue esigenze, garantendo un'esperienza visiva e funzionale impeccabile</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="service-landing-title">Landing Page Ottimizzate</h3>
+                    <p class="text-gray-600" data-lang-key="service-landing-desc">Design di landing page che non solo attirano visitatori, ma convertono. Potenzia le tue vendite!</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="service-seo-title">SEO e Marketing Digitale</h3>
+                    <p class="text-gray-600" data-lang-key="service-seo-desc">Miglioriamo la tua visibilità nei motori di ricerca e ti aiutiamo ad attirare più clienti verso la tua attività</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="service-branding-title">Consulenza di Branding</h3>
+                    <p class="text-gray-600" data-lang-key="service-branding-desc">Sviluppiamo il tuo marchio online con un approccio strategico che ti posiziona come leader nel tuo settore</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4" data-lang-key="service-logo-title">Creazione di Loghi</h3>
+                    <p class="text-gray-600" data-lang-key="service-logo-desc">Creiamo loghi personalizzati che catturano l'essenza del tuo marchio, garantendo un'identità visiva coerente e unica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="processo" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center" data-lang-key="process-title">Il nostro processo</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center service-card">
+                    <div class="text-6xl font-bold text-gray-200 mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="process-discovery">Scoperta</h3>
+                    <p class="text-gray-600" data-lang-key="process-discovery-desc">Comprendiamo i tuoi obiettivi e le tue esigenze</p>
+                </div>
+                <div class="text-center service-card">
+                    <div class="text-6xl font-bold text-gray-200 mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="process-strategy">Strategia</h3>
+                    <p class="text-gray-600" data-lang-key="process-strategy-desc">Pianifichiamo la migliore soluzione</p>
+                </div>
+                <div class="text-center service-card">
+                    <div class="text-6xl font-bold text-gray-200 mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="process-design">Design</h3>
+                    <p class="text-gray-600" data-lang-key="process-design-desc">Creiamo l'esperienza visiva</p>
+                </div>
+                <div class="text-center service-card">
+                    <div class="text-6xl font-bold text-gray-200 mb-4">04</div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="process-development">Sviluppo</h3>
+                    <p class="text-gray-600" data-lang-key="process-development-desc">Implementiamo la soluzione</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="progetti" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center animate-fade-in" data-lang-key="projects-title">Progetti in evidenza</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Proyecto 1: FAIRFINANCE24 -->
+                <div class="relative project-card group transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="sources/fairfinance24.jpg" alt="FAIRFINANCE24 GmbH" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center transition-opacity duration-300">
+                        <div class="text-white text-center px-6">
+                            <h3 class="text-xl font-bold mb-2 transform transition-all translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">FAIRFINANCE24 GmbH</h3>
+                            <p class="transition-all duration-300 delay-100" data-lang-key="view-details">Vedi dettagli</p>
+                            <a href="https://www.fairfinance24.de/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm hover:bg-white/30 transition-all duration-300">
+                                Visita il sito
+                                <span class="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Friedrich Wilhelm Raiffeisen -->
+                <div class="relative project-card group transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="sources/raiffeisen.jpg" alt="Friedrich Wilhelm Raiffeisen" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center transition-opacity duration-300">
+                        <div class="text-white text-center px-6">
+                            <h3 class="text-xl font-bold mb-2 transform transition-all translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">Raiffeisen Memorial</h3>
+                            <p class="transition-all duration-300 delay-100" data-lang-key="view-details">Vedi dettagli</p>
+                            <a href="https://friedrich-wilhelm-raiffeisen.de/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm hover:bg-white/30 transition-all duration-300">
+                                Visita il sito
+                                <span class="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Moreira Segmenti -->
+                <div class="relative project-card group transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="sources/moreirasegmenti.jpg" alt="Moreira Segmenti" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center transition-opacity duration-300">
+                        <div class="text-white text-center px-6">
+                            <h3 class="text-xl font-bold mb-2 transform transition-all translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">Moreira Segmenti</h3>
+                            <p class="transition-all duration-300 delay-100" data-lang-key="view-details">Vedi dettagli</p>
+                            <a href="https://moreirasegmenti.it/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm hover:bg-white/30 transition-all duration-300">
+                                Visita il sito
+                                <span class="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4: Rudolf Steiner -->
+                <div class="relative project-card group transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="sources/rudolfsteiner.jpg" alt="Rudolf Steiner" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center transition-opacity duration-300">
+                        <div class="text-white text-center px-6">
+                            <h3 class="text-xl font-bold mb-2 transform transition-all translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">Rudolf Steiner Memorial</h3>
+                            <p class="transition-all duration-300 delay-100" data-lang-key="view-details">Vedi dettagli</p>
+                            <a href="https://www.rudolf-steiner.de/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm hover:bg-white/30 transition-all duration-300">
+                                Visita il sito
+                                <span class="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatto" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6" data-lang-key="contact-title">Pronto per iniziare?</h2>
+                <p class="text-xl text-gray-600 mb-8" data-lang-key="contact-desc">
+                    Raccontaci del tuo progetto e ti contatteremo entro 24 ore
+                </p>
+                <form class="space-y-4">
+                    <input
+                        type="text"
+                        placeholder="Nome"
+                        data-lang-key="contact-name" 
+                        data-lang-attr="placeholder"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    >
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        data-lang-key="contact-email"
+                        data-lang-attr="placeholder"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    >
+                    <textarea
+                        placeholder="Messaggio"
+                        data-lang-key="contact-message"
+                        data-lang-attr="placeholder"
+                        rows="4"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+                    ></textarea>
+                    <div class="space-y-4">
+                        <button
+                            type="submit"
+                            class="w-full px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors btn-hover"
+                            data-lang-key="contact-send"
+                        >
+                            Invia messaggio
+                        </button>
+                        <div class="text-gray-600">
+                            <span data-lang-key="contact-or">O contattaci direttamente:</span>
+                            <div class="flex justify-center space-x-4 mt-2">
+                                <a 
+                                    href="https://wa.link/a71w1f"
+                                    target="_blank"
+                                    rel="noopener noreferrer" 
+                                    class="px-6 py-2 border border-black text-black rounded-full hover:bg-black hover:text-white transition-colors flex items-center btn-hover"
+                                >
+                                    WhatsApp
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </a>
+                                <a 
+                                    href="mailto:info@afrmstudio.it"
+                                    class="px-6 py-2 border border-black text-black rounded-full hover:bg-black hover:text-white transition-colors btn-hover"
+                                    data-lang-key="contact-email-btn"
+                                >
+                                    Email
+                                </a>
+                                <a 
+                                    href="tel:+34642374570"
+                                    class="px-6 py-2 border border-black text-black rounded-full hover:bg-black hover:text-white transition-colors btn-hover"
+                                    data-lang-key="contact-call"
+                                >
+                                    Chiama
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="font-bold mb-4" data-lang-key="footer-services">Servizi</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li data-lang-key="footer-web">Design Web Personalizzato</li>
+                        <li data-lang-key="footer-landing">Landing Pages</li>
+                        <li data-lang-key="footer-seo">SEO e Marketing Digitale</li>
+                        <li data-lang-key="footer-branding">Branding</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4" data-lang-key="footer-contact">Contatto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:info@afrmstudio.it" class="hover:text-white transition-colors">info@afrmstudio.it</a></li>
+                        <li><a href="tel:+34642374570" class="hover:text-white transition-colors">+34 642 374 570</a></li>
+                        <li><a href="https://wa.link/a71w1f" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4" data-lang-key="footer-social">Social</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                        <li>Behance</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 AFRM Studio | <span data-lang-key="footer-rights">Tutti i diritti riservati.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
