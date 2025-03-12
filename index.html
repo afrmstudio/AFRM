@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="AFRM Studio - Web design professionale e branding digitale personalizzato per imprenditori e piccole imprese che vogliono distinguersi online">
     <meta name="keywords" content="AFRM Studio, web design, freelance, siti web professionali, branding digitale, SEO, landing page ottimizzate, presenza online">
     <title>AFRM Studio | Design Web Professionale e Branding Digitale</title>
@@ -10,21 +10,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen bg-white">
+<body class="min-h-screen bg-white text-base">
     <header class="py-4 w-full bg-white">
-        <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="container mx-auto px-4 sm:px-6 flex justify-between items-center">
             <a href="/" class="flex items-center">
                 <img src="img/logo.png" alt="AFRM Studio - Web Design" class="h-6">
             </a>
             
             <!-- Menu desktop -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#servizi" class="text-gray-600 hover:text-black transition-colors text-sm" data-lang-key="nav-services">Servizi</a>
-                <a href="#progetti" class="text-gray-600 hover:text-black transition-colors text-sm" data-lang-key="nav-projects">Progetti</a>
-                <a href="#processo" class="text-gray-600 hover:text-black transition-colors text-sm" data-lang-key="nav-process">Processo</a>
-                <a href="#contatto" class="text-gray-600 hover:text-black transition-colors text-sm" data-lang-key="nav-contact">Contatto</a>
+            <nav class="hidden md:flex items-center space-x-4 lg:space-x-8">
+                <a href="#servizi" class="text-gray-600 hover:text-black transition-colors text-sm py-2 px-1" data-lang-key="nav-services">Servizi</a>
+                <a href="#progetti" class="text-gray-600 hover:text-black transition-colors text-sm py-2 px-1" data-lang-key="nav-projects">Progetti</a>
+                <a href="#processo" class="text-gray-600 hover:text-black transition-colors text-sm py-2 px-1" data-lang-key="nav-process">Processo</a>
+                <a href="#contatto" class="text-gray-600 hover:text-black transition-colors text-sm py-2 px-1" data-lang-key="nav-contact">Contatto</a>
                 
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2 ml-4">
                     <button class="lang-btn text-sm" data-lang="it">IT</button>
                     <span class="text-gray-300">|</span>
                     <button class="lang-btn text-sm" data-lang="es">ES</button>
@@ -33,37 +33,37 @@
                 </div>
             </nav>
             
-            <!-- Menu hamburger para movil -->
-            <button class="hamburger-menu md:hidden flex items-center">
+            <!-- Menu hamburger per mobile -->
+            <button class="hamburger-menu md:hidden flex items-center" aria-label="Menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
         
-        <!-- Menu mobile (inicialmente oculto) -->
-        <div class="menu-mobile fixed top-0 left-0 w-full bg-white z-50 py-4 shadow-lg">
-            <div class="container mx-auto px-6">
+        <!-- Menu mobile (inizialmente nascosto) -->
+        <div class="menu-mobile fixed top-0 left-0 w-full h-full bg-white z-50 py-4 shadow-lg overflow-y-auto">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="flex justify-between items-center mb-6">
                     <a href="/" class="flex items-center">
                         <img src="img/logo.png" alt="AFRM Studio - Web Design" class="h-6">
                     </a>
-                    <button class="close-menu">
+                    <button class="close-menu p-2" aria-label="Chiudi menu">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
                 <nav class="flex flex-col space-y-4">
-                    <a href="#servizi" class="text-gray-600 hover:text-black transition-colors text-lg" data-lang-key="nav-services">Servizi</a>
-                    <a href="#progetti" class="text-gray-600 hover:text-black transition-colors text-lg" data-lang-key="nav-projects">Progetti</a>
-                    <a href="#processo" class="text-gray-600 hover:text-black transition-colors text-lg" data-lang-key="nav-process">Processo</a>
-                    <a href="#contatto" class="text-gray-600 hover:text-black transition-colors text-lg" data-lang-key="nav-contact">Contatto</a>
+                    <a href="#servizi" class="text-gray-600 hover:text-black transition-colors text-lg py-3" data-lang-key="nav-services">Servizi</a>
+                    <a href="#progetti" class="text-gray-600 hover:text-black transition-colors text-lg py-3" data-lang-key="nav-projects">Progetti</a>
+                    <a href="#processo" class="text-gray-600 hover:text-black transition-colors text-lg py-3" data-lang-key="nav-process">Processo</a>
+                    <a href="#contatto" class="text-gray-600 hover:text-black transition-colors text-lg py-3" data-lang-key="nav-contact">Contatto</a>
                     
-                    <div class="flex items-center space-x-4 pt-4 border-t border-gray-100">
-                        <button class="lang-btn text-sm" data-lang="it">Italiano</button>
-                        <button class="lang-btn text-sm" data-lang="es">Español</button>
-                        <button class="lang-btn text-sm" data-lang="en">English</button>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-gray-100 mt-4">
+                        <button class="lang-btn text-sm py-2 px-3" data-lang="it">Italiano</button>
+                        <button class="lang-btn text-sm py-2 px-3" data-lang="es">Español</button>
+                        <button class="lang-btn text-sm py-2 px-3" data-lang="en">English</button>
                     </div>
                 </nav>
             </div>
@@ -71,47 +71,47 @@
     </header>
 
     <main>
-        <section class="py-24">
-            <div class="container mx-auto px-6">
+        <section class="py-16 sm:py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="max-w-2xl">
-                    <h1 class="text-4xl font-bold mb-6" data-lang-key="hero-title">
+                    <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6" data-lang-key="hero-title">
                         AFRM Studio: Design Web Professionale e Strategie di Branding Digitale
                     </h1>
-                    <p class="text-gray-700 mb-4" data-lang-key="hero-intro">
+                    <p class="text-gray-700 mb-3 sm:mb-4" data-lang-key="hero-intro">
                         Ciao, sono Alex, fondatore di AFRM Studio. Mi dedico a creare esperienze online che rispecchiano autenticamente l'identità della tua azienda, combinando creatività e funzionalità.
                     </p>
-                    <p class="text-gray-700 mb-8" data-lang-key="hero-desc">
+                    <p class="text-gray-700 mb-6 sm:mb-8" data-lang-key="hero-desc">
                         In AFRM Studio offro soluzioni web su misura che combinano design accattivante e funzionalità intuitive, garantendo che il tuo sito non solo attragga visitatori, ma li converta in clienti. Ogni progetto viene sviluppato con attenzione ai dettagli, ottimizzazione SEO e un'esperienza utente impeccabile.
                     </p>
-                    <a href="#contatto" class="inline-flex items-center px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm" data-lang-key="hero-cta">
+                    <a href="#contatto" class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm" data-lang-key="hero-cta">
                         Parliamo del tuo progetto
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="servizi" class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-12 text-center reveal" data-lang-key="services-title">Servizi di AFRM Studio</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card bg-white p-6 rounded-lg reveal">
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="service-web-title">Siti Web Responsive</h3>
+        <section id="servizi" class="py-16 sm:py-20 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center reveal" data-lang-key="services-title">Servizi di AFRM Studio</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="service-card bg-white p-5 sm:p-6 rounded-lg reveal">
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="service-web-title">Siti Web Responsive</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="service-web-desc">AFRM Studio sviluppa siti web personalizzati, ottimizzati per ogni dispositivo, con design moderno e funzionalità che migliorano l'esperienza utente e le conversioni</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg reveal">
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="service-landing-title">Landing Page Ottimizzate</h3>
+                    <div class="service-card bg-white p-5 sm:p-6 rounded-lg reveal">
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="service-landing-title">Landing Page Ottimizzate</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="service-landing-desc">Creo pagine di atterraggio strategiche che catturano l'attenzione dei visitatori e li guidano verso un'azione specifica, aumentando il tasso di conversione</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg reveal">
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="service-seo-title">Ottimizzazione SEO</h3>
+                    <div class="service-card bg-white p-5 sm:p-6 rounded-lg reveal">
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="service-seo-title">Ottimizzazione SEO</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="service-seo-desc">AFRM Studio implementa strategie SEO efficaci che migliorano la visibilità del tuo sito nei motori di ricerca, aumentando il traffico organico e le potenziali conversioni</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg reveal">
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="service-branding-title">Identità Digitale</h3>
+                    <div class="service-card bg-white p-5 sm:p-6 rounded-lg reveal">
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="service-branding-title">Identità Digitale</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="service-branding-desc">AFRM Studio ti aiuta a definire e rafforzare la tua identità online con elementi visivi coerenti e messaggi che comunicano i valori del tuo brand</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg reveal">
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="service-logo-title">Design Grafico</h3>
+                    <div class="service-card bg-white p-5 sm:p-6 rounded-lg reveal">
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="service-logo-title">Design Grafico</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="service-logo-desc">AFRM Studio crea loghi ed elementi grafici che rappresentano l'essenza del tuo business, fornendo un'identità visiva riconoscibile e professionale</p>
                     </div>
                 </div>
@@ -119,97 +119,97 @@
         </section>
 
         <!-- Sezione Processo -->
-        <section id="processo" class="py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-12 text-center reveal" data-lang-key="process-title">Il processo di AFRM Studio</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="p-6 text-center process-step reveal">
-                        <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
+        <section id="processo" class="py-16 sm:py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center reveal" data-lang-key="process-title">Il processo di AFRM Studio</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                    <div class="p-4 sm:p-6 text-center process-step reveal">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                             <span class="text-xl font-bold">1</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="process-discovery-title">Scoperta</h3>
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="process-discovery-title">Scoperta</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="process-discovery-desc">AFRM Studio ascolta le tue esigenze e obiettivi per comprendere a fondo il tuo business e il tuo pubblico target</p>
                     </div>
-                    <div class="p-6 text-center process-step reveal">
-                        <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="p-4 sm:p-6 text-center process-step reveal">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                             <span class="text-xl font-bold">2</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="process-planning-title">Strategia</h3>
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="process-planning-title">Strategia</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="process-planning-desc">Sviluppo un piano d'azione che integra design, funzionalità e contenuti ottimizzati per i tuoi obiettivi</p>
                     </div>
-                    <div class="p-6 text-center process-step reveal">
-                        <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="p-4 sm:p-6 text-center process-step reveal">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                             <span class="text-xl font-bold">3</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="process-design-title">Creazione</h3>
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="process-design-title">Creazione</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="process-design-desc">AFRM Studio trasforma la strategia in un design funzionale, lavorando in stretta collaborazione con te per perfezionare ogni dettaglio</p>
                     </div>
-                    <div class="p-6 text-center process-step reveal">
-                        <div class="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="p-4 sm:p-6 text-center process-step reveal">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                             <span class="text-xl font-bold">4</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-3" data-lang-key="process-launch-title">Lancio</h3>
+                        <h3 class="text-lg font-bold mb-2 sm:mb-3" data-lang-key="process-launch-title">Lancio</h3>
                         <p class="text-gray-600 text-sm" data-lang-key="process-launch-desc">Pubblico il tuo progetto e ti fornisco le indicazioni necessarie per gestirlo e mantenerlo aggiornato</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="progetti" class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-12 text-center reveal" data-lang-key="projects-title">Progetti di AFRM Studio</h2>
-                <div class="grid md:grid-cols-2 gap-8">
+        <section id="progetti" class="py-16 sm:py-20 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center reveal" data-lang-key="projects-title">Progetti di AFRM Studio</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                     <div class="relative project-card transition-all duration-300 reveal">
-                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                            <img src="sources/fairfinance24.png" alt="FAIRFINANCE24 GmbH - Progetto Web Design AFRM Studio" class="w-full h-full object-cover">
+                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden project-image-container">
+                            <img src="sources/fairfinance24.png" alt="FAIRFINANCE24 GmbH - Progetto Web Design AFRM Studio" class="w-full h-full object-cover project-image">
                         </div>
                         <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
                             <div class="text-white text-center px-6">
                                 <h3 class="text-lg font-bold mb-2">FAIRFINANCE24 GmbH</h3>
                                 <p class="text-sm mb-3">Sito web aziendale con design responsivo e ottimizzazione SEO by AFRM Studio</p>
-                                <a href="https://www.fairfinance24.de/" target="_blank" rel="noopener noreferrer" class="text-sm underline" data-lang-key="view-details">
+                                <a href="https://www.fairfinance24.de/" target="_blank" rel="noopener noreferrer" class="text-sm underline py-2" data-lang-key="view-details">
                                     Visita il sito
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="relative project-card transition-all duration-300 reveal">
-                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                            <img src="sources/raiffeisen.png" alt="Friedrich Wilhelm Raiffeisen - Progetto Web Design AFRM Studio" class="w-full h-full object-cover">
+                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden project-image-container">
+                            <img src="sources/raiffeisen.png" alt="Friedrich Wilhelm Raiffeisen - Progetto Web Design AFRM Studio" class="w-full h-full object-cover project-image">
                         </div>
                         <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
                             <div class="text-white text-center px-6">
                                 <h3 class="text-lg font-bold mb-2">Raiffeisen Memorial</h3>
                                 <p class="text-sm mb-3">Sito commemorativo con design elegante e interfaccia intuitiva by AFRM Studio</p>
-                                <a href="https://friedrich-wilhelm-raiffeisen.de/" target="_blank" rel="noopener noreferrer" class="text-sm underline" data-lang-key="view-details">
+                                <a href="https://friedrich-wilhelm-raiffeisen.de/" target="_blank" rel="noopener noreferrer" class="text-sm underline py-2" data-lang-key="view-details">
                                     Visita il sito
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="relative project-card transition-all duration-300 reveal">
-                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                            <img src="sources/moreirasegmenti.png" alt="Moreira Segmenti - Progetto E-commerce AFRM Studio" class="w-full h-full object-cover">
+                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden project-image-container">
+                            <img src="sources/moreirasegmenti.png" alt="Moreira Segmenti - Progetto E-commerce AFRM Studio" class="w-full h-full object-cover project-image">
                         </div>
                         <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
                             <div class="text-white text-center px-6">
                                 <h3 class="text-lg font-bold mb-2">Moreira Segmenti</h3>
                                 <p class="text-sm mb-3">E-commerce con esperienza utente ottimizzata per le conversioni by AFRM Studio</p>
-                                <a href="https://moreirasegmenti.it/" target="_blank" rel="noopener noreferrer" class="text-sm underline" data-lang-key="view-details">
+                                <a href="https://moreirasegmenti.it/" target="_blank" rel="noopener noreferrer" class="text-sm underline py-2" data-lang-key="view-details">
                                     Visita il sito
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="relative project-card transition-all duration-300 reveal">
-                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                            <img src="sources/rudolfsteiner.png" alt="Rudolf Steiner - Progetto Web Design AFRM Studio" class="w-full h-full object-cover">
+                        <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden project-image-container">
+                            <img src="sources/rudolfsteiner.png" alt="Rudolf Steiner - Progetto Web Design AFRM Studio" class="w-full h-full object-cover project-image">
                         </div>
                         <div class="project-overlay absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center">
                             <div class="text-white text-center px-6">
                                 <h3 class="text-lg font-bold mb-2">Rudolf Steiner Memorial</h3>
                                 <p class="text-sm mb-3">Piattaforma educativa con design accessibile by AFRM Studio</p>
-                                <a href="https://www.rudolf-steiner.de/" target="_blank" rel="noopener noreferrer" class="text-sm underline" data-lang-key="view-details">
+                                <a href="https://www.rudolf-steiner.de/" target="_blank" rel="noopener noreferrer" class="text-sm underline py-2" data-lang-key="view-details">
                                     Visita il sito
                                 </a>
                             </div>
@@ -219,13 +219,13 @@
             </div>
         </section>
 
-        <section id="contatto" class="py-24">
-            <div class="container mx-auto px-6">
+        <section id="contatto" class="py-16 sm:py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
                 <div class="max-w-xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-6 reveal" data-lang-key="contact-title">Contatta AFRM Studio per il tuo progetto</h2>
-                    <p class="text-gray-600 mb-8 reveal" data-lang-key="contact-subtitle">Richiedi una consulenza gratuita. AFRM Studio risponderà entro 24 ore per discutere le tue esigenze e come possiamo aiutarti a raggiungere i tuoi obiettivi digitali.</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 reveal" data-lang-key="contact-title">Contatta AFRM Studio per il tuo progetto</h2>
+                    <p class="text-gray-600 mb-6 sm:mb-8 reveal" data-lang-key="contact-subtitle">Richiedi una consulenza gratuita. AFRM Studio risponderà entro 24 ore per discutere le tue esigenze e come possiamo aiutarti a raggiungere i tuoi obiettivi digitali.</p>
                     <form class="space-y-4" id="contact-form">
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input
                                 type="text"
                                 placeholder="Nome"
@@ -233,7 +233,7 @@
                                 required
                                 data-lang-key="contact-name" 
                                 data-lang-attr="placeholder"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
                             >
                             <input
                                 type="email"
@@ -242,7 +242,7 @@
                                 required
                                 data-lang-key="contact-email"
                                 data-lang-attr="placeholder"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
                             >
                         </div>
                         <input
@@ -251,7 +251,7 @@
                             name="subject"
                             data-lang-key="contact-subject"
                             data-lang-attr="placeholder"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
                         >
                         <textarea
                             placeholder="Messaggio"
@@ -260,37 +260,37 @@
                             data-lang-key="contact-message"
                             data-lang-attr="placeholder"
                             rows="4"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-black"
                         ></textarea>
                         <div class="space-y-4">
                             <button
                                 type="submit"
-                                class="w-full py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm"
+                                class="w-full py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm"
                                 data-lang-key="contact-send"
                             >
                                 Invia messaggio a AFRM Studio
                             </button>
                             <div class="text-gray-600 text-sm">
                                 <span data-lang-key="contact-or">O contatta AFRM Studio direttamente:</span>
-                                <div class="flex justify-center space-x-3 mt-4">
+                                <div class="flex flex-wrap justify-center gap-3 mt-4">
                                     <a 
                                         href="https://wa.link/a71w1f"
                                         target="_blank"
                                         rel="noopener noreferrer" 
-                                        class="px-4 py-2 border border-gray-300 text-gray-800 rounded-full hover:bg-gray-100 transition-colors text-sm"
+                                        class="px-4 py-3 border border-gray-300 text-gray-800 rounded-full hover:bg-gray-100 transition-colors text-sm contact-link"
                                     >
                                         WhatsApp →
                                     </a>
                                     <a 
                                         href="mailto:info@afrmstudio.it"
-                                        class="px-4 py-2 border border-gray-300 text-gray-800 rounded-full hover:bg-gray-100 transition-colors text-sm"
+                                        class="px-4 py-3 border border-gray-300 text-gray-800 rounded-full hover:bg-gray-100 transition-colors text-sm contact-link"
                                         data-lang-key="contact-email-btn"
                                     >
                                         Email
                                     </a>
                                     <a 
                                         href="tel:+34642374570"
-                                        class="px-4 py-2 border border-gray-300 text-gray-800 rounded-full hover:bg-gray-100 transition-colors text-sm"
+                                        class="px-4 py-3 border border-gray-300 text-gray-800 rounded-full hover:bg-gray-100 transition-colors text-sm contact-link"
                                         data-lang-key="contact-call"
                                     >
                                         Chiama
@@ -305,8 +305,8 @@
     </main>
 
     <footer class="py-12 bg-black text-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h4 class="font-bold mb-4 text-sm" data-lang-key="footer-services">Servizi AFRM Studio</h4>
                     <ul class="space-y-2 text-xs text-gray-400">
