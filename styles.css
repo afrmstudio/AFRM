@@ -1,39 +1,42 @@
-/* Estilos base */
+/* Stili base */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #333;
     line-height: 1.5;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header y navegación */
+/* Header e navigazione */
 header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
 }
 
 .logo-hover {
     transition: opacity 0.2s ease;
 }
-
 .logo-hover:hover {
     opacity: 0.8;
 }
 
-/* Menú móvil */
+/* Menù mobile */
 .menu-mobile {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
+    display: none;
 }
-
 .menu-mobile.active {
     transform: translateY(0);
+    display: block;
 }
 
-/* Animaciones para secciones */
+/* Animazioni per sezioni */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -44,7 +47,6 @@ header {
         transform: translateY(0);
     }
 }
-
 .fade-in {
     animation: fadeIn 0.8s ease forwards;
 }
@@ -54,10 +56,23 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
-
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Proceso */
+.process-step {
+    position: relative;
+}
+.process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -16px;
+    width: 32px;
+    height: 2px;
+    background-color: #eaeaea;
 }
 
 /* Proyectos */
@@ -66,18 +81,15 @@ header {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.1);
 }
-
 .project-overlay {
     opacity: 0;
     transition: opacity 0.3s ease;
     background-color: rgba(0, 0, 0, 0.7);
 }
-
 .project-card:hover .project-overlay {
     opacity: 1;
 }
@@ -86,7 +98,6 @@ header {
 input, textarea {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 input:focus, textarea:focus {
     border-color: #000;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
@@ -96,11 +107,9 @@ input:focus, textarea:focus {
 button, .btn {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 button:hover, .btn:hover {
     transform: translateY(-2px);
 }
-
 button:active, .btn:active {
     transform: translateY(0);
 }
@@ -109,7 +118,6 @@ button:active, .btn:active {
 .contact-link {
     transition: all 0.3s ease;
 }
-
 .contact-link:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -118,11 +126,9 @@ button:active, .btn:active {
 footer {
     background-color: #000;
 }
-
 footer a {
     transition: color 0.2s ease;
 }
-
 footer a:hover {
     color: white;
 }
@@ -134,11 +140,9 @@ footer a:hover {
     transition: opacity 0.2s ease;
     padding: 2px 4px;
 }
-
 .lang-btn:hover {
     opacity: 1;
 }
-
 .lang-btn.active {
     opacity: 1;
     font-weight: 500;
@@ -162,6 +166,10 @@ footer a:hover {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+    
+    .process-step:not(:last-child)::after {
+        display: none;
+    }
 }
 
 @media (max-width: 640px) {
@@ -183,4 +191,49 @@ footer a:hover {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* Aggiunta per il menu hamburger */
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/* Stili per la validazione del form */
+input:invalid, textarea:invalid {
+    border-color: #ff5252;
+}
+
+.form-error {
+    color: #ff5252;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Stile per il bottone di invio disabilitato */
+button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Stili per effetto scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
